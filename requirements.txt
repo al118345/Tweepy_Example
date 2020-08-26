@@ -1,0 +1,4 @@
+#python get-pip.py install -r requirements.txt
+
+tweepy
+pandas
