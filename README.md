@@ -1,7 +1,7 @@
-# UOC Tipologia de Datos
+# Cómo obtener y almacenar en un documento .csv Tweets sobre una temática
 
 
-## Getting Started
+## Introducción
 
 En este proyecto vamos a generar una pequeña investigación desde el punto de vista del Big Data y de las redes sociales. Exactactamente, hemos utilizado Twitter como fuente textual, una red social en la que se pueden recolectar datos de forma más sencilla y, sobre todo, inmediata, necesario para establecer correlaciones temporales entre la evolución del virus y la opinión del mismo  de la sociedad.
 
