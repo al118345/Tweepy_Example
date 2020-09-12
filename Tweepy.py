@@ -64,7 +64,7 @@ if __name__ == '__main__':
                 print("Creación de la cabecera")
 
     start_date = datetime(2019, 9, 19, 12, 00, 00)
-    end_date = datetime(2020, 4, 19, 13, 00, 00)
+    end_date = date.today()
 
     for tweet in tweepy.Cursor(api.search, q="Coronavirus" ,
                                        lang="es",
