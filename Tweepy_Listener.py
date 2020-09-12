@@ -66,34 +66,6 @@ if __name__ == '__main__':
                     ,'Contribuciones'
                     ,'Idioma'
                     ,'Retweeted'
-                    ,'Andalucía'
-                    ,'Aragón'
-                    ,'Principado de Asturias'
-                    ,'Islas Baleares'
-                    ,'Canarias'
-                    ,'Cantabria'
-                    ,'Castilla y León'
-                    ,'Castilla  La Mancha'
-                    ,'Cataluña'
-                    ,'Galicia'
-                    ,'C.Valenciana'
-                    ,'Extremadura'
-                    ,'Comunidad de Madrid'
-                    ,'Región de Murcia'
-                    ,'Comunidad Foral de Navarra'
-                    ,'País Vasco'
-                    ,'La Rioja'
-                    ,'Ceuta'
-                    ,'Melilla','World_cases', 'USA_cases', 'Spain_cases',
-                          'Italy_cases', 'France_cases',
-                          'Germany_cases', 'UK_cases','China_cases', 'Iran_cases',
-                          'Turkey_cases', 'Brasil_cases',
-                          'Russia_cases', 'Japan_cases','Moroco_cases',
-                'World_dead', 'USA_dead', 'Spain_dead', 'Italy_dead'
-                    , 'France_dead','Germany_dead', 'UK_dead',
-                          'China_dead', 'Iran_dead', 'Turkey_dead',
-                          'Brasil_dead',
-                         'Russia_dead', 'Japan_dead', 'Moroco_dead',
 
                 ]
                 csvWriter.writerow(cabecera)
