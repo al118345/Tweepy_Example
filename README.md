@@ -26,6 +26,7 @@ En este repositorio se pueden encontrar los siguientes ficheros:
 ### Prerequisites
 
 ```
+twint
 tweepy
 pandas
 ```
