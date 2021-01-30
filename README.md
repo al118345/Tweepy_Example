@@ -37,6 +37,11 @@ Para ejecutar este proyecto es necesario ejecutar el siguiente comando y añadir
 ```
 python get-pip.py install -r requirements.txt
 ```
+o en el caso de linux
+
+```
+pip install -r requirements.txt
+```
 
 ## Authors
 * Rubén Pérez Ibáñez
