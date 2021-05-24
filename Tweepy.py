@@ -1,8 +1,6 @@
 import tweepy
 import csv #Import csv
 # import libraries
-from bs4 import BeautifulSoup
-from selenium import webdriver
 import time
 import pandas as pd
 from datetime import date, datetime
