@@ -14,8 +14,7 @@ Código base para la obtención de los tweets.
 
 class MyStreamListener(tweepy.StreamListener):
     def on_status(self, status):
-        csvFile = open('resultado_geolocalizado.csv', 'a', newline='')
-        csvWriter = csv.writer(csvFile)
+
         # if status is not False and status.text is not None and
         if status.coordinates is not None:
             try:
@@ -31,9 +30,11 @@ class MyStreamListener(tweepy.StreamListener):
                      status.place, status.contributors, status.lang,
                      status.retweeted]
             linea = linea
+            csvFile = open('resultado_geolocalizado.csv', 'a', newline='')
+            csvWriter = csv.writer(csvFile)
             csvWriter.writerow(linea)
+            csvFile.close()
             print("Almacenamos Tweet")
-        csvFile.close()
         # print("fin")
 
     def on_error(self, status_code):
@@ -56,7 +57,7 @@ if __name__ == '__main__':
                 print('Preparado el fichero')
             else:
                 print('El no archivo existe.');
-                csvFile = open('resultat.csv', 'w', newline='')
+                csvFile = open('resultado_geolocalizado.csv', 'w', newline='')
                 csvWriter = csv.writer(csvFile)
                 cabecera = ['Fecha_creación', 'Id', 'Texto', 'Fuente',
                             'Truncado'
