@@ -19,7 +19,7 @@ En este repositorio se pueden encontrar los siguientes ficheros:
   
 * **Tweepy_Listener.py** Este fichero recoge el código que ejecuta un Listener encargado de ir almacenado continuamente todos los tweets sobre una temática.
   
-* **Tweepy_ejemplo_localizacion.py** Este fichero recoge el código que ejecuta un Listener encargado de ir almacenado continuamente todos los tweets con información sobre su geolocalización.
+* **Tweepy_ejemplo_localizacion.py** Este fichero recoge el código que ejecuta un Listener encargado de ir almacenado continuamente todos los tweets con información sobre su geolocalización. Más información https://1938.com.es/tweets_geolocalizados.
 
 * **autenticate_example.py**  Este archivo es un fichero auxiliar donde se referencian las credenciales para acceder a la API de Twitter y obtener los tweets.
 
