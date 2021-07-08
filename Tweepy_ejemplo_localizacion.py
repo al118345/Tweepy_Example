@@ -1,9 +1,9 @@
+# encode : utf-8
+
 import tweepy
 import csv  # Import csv
 # import libraries
-import time
-import pandas as pd
-from datetime import date
+
 import os
 from autenticate import get_auth
 
@@ -21,6 +21,7 @@ class MyStreamListener(tweepy.StreamListener):
                 texto = status.extended_tweet["full_text"]
             except AttributeError:
                 texto = status.text
+            texto = texto.replace('\n', '')
             print(texto)
             linea = [status.created_at,
                      status.id, texto, status.source, status.truncated,
@@ -29,8 +30,9 @@ class MyStreamListener(tweepy.StreamListener):
                      status.coordinates,
                      status.place, status.contributors, status.lang,
                      status.retweeted]
-            linea = linea
-            csvFile = open('resultado_geolocalizado.csv', 'a', newline='')
+
+
+            csvFile = open('resultado_geolocalizado.csv', 'a', encoding= 'utf-8',  newline='')
             csvWriter = csv.writer(csvFile)
             csvWriter.writerow(linea)
             csvFile.close()
@@ -57,7 +59,7 @@ if __name__ == '__main__':
                 print('Preparado el fichero')
             else:
                 print('El no archivo existe.');
-                csvFile = open('resultado_geolocalizado.csv', 'w', newline='')
+                csvFile = open('resultado_geolocalizado.csv', 'w', encoding= 'utf-8', newline='')
                 csvWriter = csv.writer(csvFile)
                 cabecera = ['Fecha_creación', 'Id', 'Texto', 'Fuente',
                             'Truncado'
@@ -75,7 +77,7 @@ if __name__ == '__main__':
                 csvFile.close()
                 print("Creación de la cabecera")
             myStream = tweepy.Stream(auth=api.auth, listener=myStreamListener)
-            myStream.filter(track=['Coronavirus'])
+            myStream.filter(track=['Coronavirus'], languages=['en'])
         except:
             continue
 

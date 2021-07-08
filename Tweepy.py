@@ -1,8 +1,7 @@
 import tweepy
 import csv #Import csv
 # import libraries
-import time
-import pandas as pd
+
 from datetime import date, datetime
 import os
 from autenticate import get_auth
@@ -14,13 +13,14 @@ Código base para la obtención de los tweets.
 '''
 
 def almacenar_tweet( status):
-            csvFile = open('result.csv', 'a', newline='')
+            csvFile = open('result.csv', 'a', encoding= 'utf-8', newline='')
             csvWriter = csv.writer(csvFile)
             if status is not False and status.text is not None:
                 try:
                     texto = status.extended_tweet["full_text"]
                 except AttributeError:
                     texto = status.text
+                texto = texto.replace('\n', ' ')
                 print(texto)
 
 
@@ -50,7 +50,7 @@ if __name__ == '__main__':
                print('Preparado el fichero')
     else:
                 print('El no archivo existe.');
-                csvFile = open('result.csv', 'w', newline='')
+                csvFile = open('result.csv', 'w', encoding= 'utf-8',  newline='')
                 csvWriter = csv.writer(csvFile)
                 cabecera=['Fecha_creación','Id','Texto','Fuente','Truncado'
                     ,'Respuesta_al_tweet','Respuesta_al_usuario_id'

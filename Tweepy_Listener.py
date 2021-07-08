@@ -1,9 +1,8 @@
+# encode : utf-8
+
 import tweepy
 import csv #Import csv
 # import libraries
-import time
-import pandas as pd
-from datetime import date
 import os
 
 
@@ -15,13 +14,14 @@ Código base para la obtención de los tweets.
 '''
 class MyStreamListener(tweepy.StreamListener):
     def on_status(self, status):
-            csvFile = open('result.csv', 'a', newline='')
+            csvFile = open('result.csv', 'a', encoding= 'utf-8', newline='')
             csvWriter = csv.writer(csvFile)
             if status is not False and status.text is not None:
                 try:
                     texto = status.extended_tweet["full_text"]
                 except AttributeError:
                     texto = status.text
+                texto = texto.replace('\n',' ')
                 print(texto)
                 linea = [status.created_at,
                          status.id, texto, status.source, status.truncated,
@@ -55,7 +55,7 @@ if __name__ == '__main__':
                print('Preparado el fichero')
             else:
                 print('El no archivo existe.');
-                csvFile = open('result.csv', 'w', newline='')
+                csvFile = open('result.csv', 'w', encoding= 'utf-8', newline='')
                 csvWriter = csv.writer(csvFile)
                 cabecera=['Fecha_creación','Id','Texto','Fuente','Truncado'
                     ,'Respuesta_al_tweet','Respuesta_al_usuario_id'
