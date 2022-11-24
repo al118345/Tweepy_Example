@@ -12,11 +12,11 @@ twint.run.Search(c)
 '''
 # Segunda consulta.
 c = twint.Config()
-# Buscamos un usario
 # Buscamos el término que aparezca.
 c.Search = "spain"
 #almacenamos la búsquead en un documento csv.
 c.Store_csv = True
 # escoge el nombre del fichero.
 c.Output = "futbol.csv"
+c.Limit = 100
 twint.run.Search(c)
