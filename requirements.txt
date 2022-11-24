@@ -1,4 +1,5 @@
 #python get-pip.py install -r requirements.txt
-twint
 tweepy
 pandas
+aiohttp==3.7.0
+git+https://github.com/twintproject/twint.git@origin/master#egg=twint

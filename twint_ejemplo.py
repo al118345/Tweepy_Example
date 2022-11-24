@@ -13,11 +13,10 @@ twint.run.Search(c)
 # Segunda consulta.
 c = twint.Config()
 # Buscamos un usario
-c.Username = "javieroliveira_"
 # Buscamos el término que aparezca.
-c.Search = "joan"
+c.Search = "spain"
 #almacenamos la búsquead en un documento csv.
 c.Store_csv = True
 # escoge el nombre del fichero.
-c.Output = "joanplanas.csv"
+c.Output = "futbol.csv"
 twint.run.Search(c)
