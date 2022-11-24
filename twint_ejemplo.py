@@ -19,4 +19,12 @@ c.Store_csv = True
 # escoge el nombre del fichero.
 c.Output = "futbol.csv"
 c.Limit = 100
+
+'''
+Ejemplos de buscadas. 
+config.Lang = "en"
+config.Limit = 100
+config.Since = "2019–04–29"
+config.Until = "2020–04–29"
+'''
 twint.run.Search(c)
