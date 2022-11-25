@@ -25,6 +25,8 @@ En este repositorio se pueden encontrar los siguientes ficheros:
 
 * **requirements.txt** Este archivo menciona los paquetes Python necesarios para ejecutar el código.
 
+Versión de python 3.8
+
 ### Prerequisites
 
 ```
